@@ -9,8 +9,8 @@ import {
   StartCountdownButton,
   StopCountdownButton,
 } from './styles'
-import { NewCycleForm } from './components/NewCycleForm'
-import { Countdown } from './components/Countdown'
+import { NewCycleForm } from './components/NewCycleForm/index'
+import { Countdown } from './components/Countdown/index'
 import { CyclesContext } from '../../contexts/CyclesContext'
 
 const newCycleFormValidationSchema = zod.object({
