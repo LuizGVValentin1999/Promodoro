@@ -1,3 +1,5 @@
+import { ActionTypes } from './actions'
+
 export interface Cycle {
   id: string
   task: string
@@ -6,19 +8,11 @@ export interface Cycle {
   interruptedDate?: Date
   finishedDate?: Date
 }
-
 interface CyclesState {
   cycles: Cycle[]
   activeCycleId: string | null
 }
 
-export enum ActionTypes {
-  ADD_NEW_CYCLE = 'ADD_NEW_CYCLE',
-  INTERRUPT_CURRENT_CYCLE = 'INTERRUPT_CURRENT_CYCLE',
-  MARK_CURRENT_CYCLE_AS_FINISHED = 'MARK_CURRENT_CYCLE_AS_FINISHED',
-}
-
-// eslint-disable-next-line prettier/prettier
 export function cyclesReducer(state: CyclesState, action: any) {
   switch (action.type) {
     case ActionTypes.ADD_NEW_CYCLE:
